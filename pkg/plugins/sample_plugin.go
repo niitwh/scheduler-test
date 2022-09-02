@@ -67,9 +67,9 @@ func (s *Sample) PreBind(ctx context.Context, state *framework.CycleState, p *v1
 
 
 
-//type PluginFactory = func(f FrameworkHandle) (Plugin, error)
-func New(f framework.Handle) (framework.Plugin, error) {
+func New(_ runtime.Object, h framework.Handle) (framework.Plugin, error) {
 	return &Sample{
-		handle: f,
+		handle: h,
 	}, nil
 }
+
