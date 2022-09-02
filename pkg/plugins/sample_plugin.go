@@ -66,6 +66,7 @@ func (s *Sample) PreBind(ctx context.Context, state *framework.CycleState, p *v1
 }
 
 
+
 func New(_ runtime.Object, h framework.Handle) (framework.Plugin, error) {
 	return &Sample{
 		handle: h,
